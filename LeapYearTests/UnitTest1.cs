@@ -9,7 +9,7 @@ namespace LeapYearTests
         [Test]
         public void Returns_1997_False([Values(1997)] int year)
         {
-            var x = Program.IsLeapYear(1997);
+            var x = Program.IsLeapYear(year);
 
             Assert.IsFalse(x);
         }
@@ -17,7 +17,15 @@ namespace LeapYearTests
         [Test]
         public void Returns_1996_True([Values(1996)] int year)
         {
-            var x = Program.IsLeapYear(1996);
+            var x = Program.IsLeapYear(year);
+
+            Assert.IsTrue(x);
+        }
+
+        [Test]
+        public void Returns_1600_True([Values(1600)] int year)
+        {
+            var x = Program.IsLeapYear(year);
 
             Assert.IsTrue(x);
         }
