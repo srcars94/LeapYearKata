@@ -13,5 +13,13 @@ namespace LeapYearTests
 
             Assert.IsFalse(x);
         }
+
+        [Test]
+        public void Returns_1996_True([Values(1996)] int year)
+        {
+            var x = Program.IsLeapYear(1996);
+
+            Assert.IsTrue(x);
+        }
     }
 }
