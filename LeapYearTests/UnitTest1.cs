@@ -43,5 +43,9 @@ namespace LeapYearTests
         public void Returns_0_Exception([Values(0)] int year) =>
             Assert.Throws<ArgumentNullException>(() => Program.IsLeapYear(year));
 
+        [Test]
+        public void Returns_Less_Than_4_Exception([Values(3)] int year) =>
+            Assert.Throws<IndexOutOfRangeException>(() => Program.IsLeapYear(year));
+
     }
 }

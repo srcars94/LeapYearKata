@@ -13,6 +13,8 @@ namespace LeapYearKata
         {
             if (year == 0) throw new ArgumentNullException();
 
+            if (year < 4 && year > 0) throw new IndexOutOfRangeException();
+
             if ((year % 4 == 0) && (year % 400 == 0)) return true;
 
             if ((year % 100 == 0) && (year % 400 != 0)) return false;
