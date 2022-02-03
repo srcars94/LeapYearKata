@@ -1,5 +1,6 @@
 using LeapYearKata;
 using NUnit.Framework;
+using System;
 
 namespace LeapYearTests
 {
@@ -37,5 +38,10 @@ namespace LeapYearTests
 
             Assert.IsFalse(x);
         }
+
+        [Test]
+        public void Returns_0_Exception([Values(0)] int year) =>
+            Assert.Throws<ArgumentNullException>(() => Program.IsLeapYear(year));
+
     }
 }
